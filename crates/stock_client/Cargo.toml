@@ -1,0 +1,16 @@
+[package]
+name = "stock_client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+log = { workspace = true }
+env_logger = { workspace = true }
+clap = { workspace = true }
+ctrlc = { workspace = true }
+thiserror = { workspace = true }
+stock_lib = { path = "../stock_lib" }
+anyhow = { workspace = true }
+
+[dev-dependencies]
+tempfile = "3.27.0"

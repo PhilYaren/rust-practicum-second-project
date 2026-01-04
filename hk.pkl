@@ -1,0 +1,26 @@
+amends "package://github.com/jdx/hk/releases/download/v1.2.0/hk@1.2.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.2.0/hk@1.2.0#/Builtins.pkl"
+
+hooks {
+    ["pre-commit"] {
+        fix = true
+        steps {
+            ["fmt"] {
+                check = "cargo fmt"
+                exclusive = true
+            }
+            ["clippy"] {
+                check = "cargo clippy --fix"
+                exclusive = true
+            }
+            ["test"] {
+                check = "cargo test"
+                exclusive = true
+            }
+            ["build"] {
+                check = "git add ."
+                exclusive = true
+            }
+        }
+    }
+}

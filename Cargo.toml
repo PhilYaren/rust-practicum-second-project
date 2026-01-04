@@ -1,0 +1,22 @@
+[workspace]
+members = [
+    "crates/stock_lib",
+    "crates/stock_server",
+    "crates/stock_client",
+]
+resolver = "2"
+
+[workspace.dependencies]
+log = "0.4"
+env_logger = "0.11"
+rand = "0.10.1"
+clap = { version = "4.5.54", features=['derive']  }
+syn = "2.0.114"
+ctrlc = "3.5.1"
+quote = "1.0.44"
+anyhow = "1.0.102"
+thiserror = "2.0.18"
+serde_json = "1.0.149"
+proc-macro2 = "1.0.106"
+crossbeam-channel = "0.5.15"
+serde = { version = "1.0.228", features = ['derive'] }
